@@ -1,47 +1,45 @@
-# Svelte + TS + Vite
+<p>
+  <a href="https://boardgamegeek.com/boardgame/50/lost-cities">
+    <img alt="BoardGameGeek link to Lost Cities (1999) card game" src="https://cf.geekdo-images.com/AL5D-dXabY-Lk3PqIFk_0g__itemrep/img/tF5lpPY_XFdmd6znFn1GmuUgObs=/fit-in/246x300/filters:strip_icc()/pic4597095.jpg" width="175" />
+  </a>
+</p>
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+# Lost Cities Score Calculator
 
-## Recommended IDE Setup
+> Set out on expeditions 🛕, but will your findings outweigh the cost of each adventure? 🤠
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+[Lost Cities](https://boardgamegeek.com/boardgame/50/lost-cities) by the world-renowned board-game author Reiner
+Knizia takes you on a journey to undiscovered countries and mythical places.
 
-## Need an official Svelte framework?
+Two explorers embark on research journeys to remote corners of the world: the Himalayan mountains, the Central American rainforest, the Egyptian desert, a mysterious volcano, and the bottom of the sea. As the cards are played, the expedition routes take shape and the explorers earn points. The most daring adventurers make bets on the success of their expeditions. The explorer with the highest score after three rounds of expeditions wins. The rules of the game are simple, but beware: The lost cities hold many unseen mysteries! This new edition features a sixth set of expedition cards and a two-sided game board: On one side is the classic five-expedition game. On the other side, a new variant with six expeditions is offered.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Why do we need a calculator?
 
-## Technical considerations
+The motivation behind this microsite is that I wanted to simplify the score calculations after every game, because it can sometimes be tricky. This online calculator makes the scoring quick and easy, so you'll have more time to enjoy the fun part and play another party.
 
-**Why use this over SvelteKit?**
+_„...Another calculator?!”_ \
+There are a half-dozen calculator on the web, some are still working, some are already broken. Unfortunately, I cannot find a functional variant that supports the 6th expedition version, has a relatively good UX, and also works on mobile devices. \
+Moreover, this is a great opportunity to learn [Svelte](https://svelte.dev/), because before this project I had no expertise in it. So this is my "mini hacking project" exploring [Svelte](https://svelte.dev/).
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Available functions
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- Calculate points for each deck
+- Set player names and save it for later use
+- Show score calculation details
+- Support the newer variant of the game (i.e. the 6th expedition)
+- Mobile / tablet support
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+## Rules and other useful links
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+- [Official rulebook](https://www.thamesandkosmos.com/manuals/full/691821_LC_Card_Game.pdf)
+- [Official product page](https://store.thamesandkosmos.com/products/lost-cities-card-game-with-6th-expedition)
+- [BoardGameGeek.com page](https://boardgamegeek.com/boardgame/50/lost-cities)
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+## Used technologies / build components
 
-**Why include `.vscode/extensions.json`?**
+- [Svelte](https://svelte.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+**Happy gaming! 🎲**
