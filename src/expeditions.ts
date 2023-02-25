@@ -12,6 +12,16 @@ export type ExpeditionRoute = {
   rgbCardColor: [number, number, number];
 };
 
+export type ExpeditionScore = {
+  cost: number;
+  sum: number;
+  subtotal: number;
+  wagerMultiplier: number;
+  result: number;
+  bonus: number;
+  final: number;
+};
+
 export const expeditions: ExpeditionRoute[] = [
   {
     id: "desert",

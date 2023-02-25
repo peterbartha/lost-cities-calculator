@@ -1,20 +1,12 @@
 <script lang="ts">
   import Card from "./Card.svelte";
   import { createEventDispatcher } from "svelte";
-  import type { ExpeditionRoute } from "../expeditions";
+  import type { ExpeditionRoute, ExpeditionScore } from "../expeditions";
 
   export let route: ExpeditionRoute;
 
   const dispatch = createEventDispatcher<{
-    expedition: {
-      cost: number;
-      sum: number;
-      subtotal: number;
-      wagerMultiplier: number;
-      result: number;
-      bonus: number;
-      final: number;
-    };
+    expedition: ExpeditionScore;
   }>();
 
   const expeditionCost = -20;
