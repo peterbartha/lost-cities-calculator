@@ -31,18 +31,18 @@
   };
 </script>
 
-<main class="container m-auto">
+<main class="container">
   <h1 class="text-2xl text-center mb-5">Lost Cities Score Calculator</h1>
 
   <section
-    class="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+    class="box m-auto bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
   >
     <header class="flex items-baseline mb-2">
       <h2 class="flex-1 text-xl">Player Name</h2>
       <strong>Σ {finalScore}</strong>
     </header>
     <img
-      class="board block mb-2 shadow-md"
+      class="board block m-auto mb-2 shadow-md"
       src={boardForSixExpeditions}
       alt="Lost Cities board for 5 expeditions"
     />
@@ -58,6 +58,9 @@
 </main>
 
 <style>
+  .box {
+    max-width: 350px;
+  }
   .board {
     width: 300px;
   }
